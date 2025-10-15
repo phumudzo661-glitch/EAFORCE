@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EA FORCE — Mobile EA Hosting Service</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --red:#e11b1b;
+      --muted:#bfbfbf;
+      --card:#111111;
+      --glass:rgba(255,255,255,0.03);
+      --maxw:1100px;
+      font-family:'Poppins',sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    .container{max-width:var(--maxw);margin:0 auto;padding:36px 18px}
+    header{display:flex;align-items:center;justify-content:space-between;animation:fadeIn 1s ease-in-out}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo img{height:44px;animation:float 3s ease-in-out infinite}
+    .logo h1{font-size:22px;color:var(--red);letter-spacing:1px;margin:0;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;transition:color .3s}
+    nav a:hover{color:var(--red)}
+    .cta-btn{background:var(--red);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600;transition:transform .3s}
+    .cta-btn:hover{transform:scale(1.05)}
+
+    .hero{display:grid;grid-template-columns:1fr 480px;gap:32px;align-items:center;padding:36px 0;animation:fadeUp 1.2s ease-out}
+    .hero-left h2{font-size:42px;margin:0 0 12px;color:#fff}
+    .hero-left p{color:var(--muted);font-size:17px;margin-bottom:20px}
+    .actions{display:flex;gap:12px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;transition:all .3s ease}
+    .btn-primary{background:var(--red);color:#fff}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 15px var(--red)}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .btn-ghost:hover{border-color:var(--red);color:var(--red)}
+
+    .mock{background:linear-gradient(180deg,rgba(255,255,255,0.05),transparent);border-radius:40px;padding:20px;box-shadow:0 0 30px rgba(225,27,27,0.3);display:flex;align-items:center;justify-content:center;animation:float 5s ease-in-out infinite;position:relative;overflow:hidden}
+    .mock::before{content:'';position:absolute;inset:0;border:8px solid #222;border-radius:50px;}
+    .mock img{max-width:90%;border-radius:30px;object-fit:cover}
+
+    .features,.pricing,.setup,.faq{margin-top:50px}
+    .section-title{color:var(--red);font-size:26px;margin-bottom:20px}
+    .card{background:var(--card);padding:20px;border-radius:12px;margin-bottom:16px;box-shadow:0 6px 18px rgba(0,0,0,0.6);transition:transform .3s ease,box-shadow .3s ease}
+    .card:hover{transform:translateY(-5px);box-shadow:0 0 20px rgba(225,27,27,0.3)}
+    .card i{font-size:28px;color:var(--red);margin-bottom:8px}
+    .card h3{margin:0 0 8px;color:var(--red)}
+    .card p{margin:0;color:var(--muted)}
+
+    .pricing .plan{background:var(--card);border-radius:12px;padding:20px;margin:10px 0;text-align:center}
+    .plan h4{color:var(--red);margin-bottom:10px}
+    .plan p{color:var(--muted)}
+    .plan strong{font-size:20px;color:#fff}
+
+    footer{margin-top:60px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.05);text-align:center;color:var(--muted);font-size:14px}
+    .socials{margin-top:12px;display:flex;justify-content:center;gap:16px}
+    .socials a{color:var(--muted);font-size:20px;transition:color .3s}
+    .socials a:hover{color:var(--red)}
+
+    @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+    @keyframes fadeUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.hero-left h2{font-size:32px}.mock{margin-top:30px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="https://img.freepik.com/premium-vector/bull-icon_929495-5.jpg" alt="EA FORCE logo" />
+        <h1>EA FORCE</h1>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a class="cta-btn" href="get started.html">Get Started</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h2><i class="fa-solid fa-mobile-screen-button"></i> Mobile EA Hosting Service</h2>
+        <p>Seamless trading automation on-the-go. Convert your Expert Advisors (EAs) into mobile bots for uninterrupted trading with low latency and 24/7 uptime.</p>
+        <p style="color:var(--red);font-weight:600">100% EA Execution Guarantee | ⭐ 4.8/5 from 337+ Reviews</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#pricing"><i class="fa-solid fa-chart-line"></i> View Plans</a>
+          <a class="btn btn-ghost" href="#faq"><i class="fa-solid fa-circle-info"></i> Learn More</a>
+        </div>
+      </div>
+      <div class="mock">
+        <img src="images/phone-mock.png" alt="Phone mockup" />
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <h3 class="section-title">Why Choose EA FORCE?</h3>
+      <div class="card"><i class="fa-solid fa-bolt"></i><h3>Low Latency</h3><p>Execute trades with minimal delay, as low as 1ms, for precise market entry.</p></div>
+      <div class="card"><i class="fa-solid fa-shield"></i><h3>Secure Hosting</h3><p>Advanced cybersecurity protects your trading data from threats.</p></div>
+      <div class="card"><i class="fa-solid fa-clock"></i><h3>24/7 Uptime</h3><p>Keep your EAs running continuously with our reliable servers.</p></div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <h3 class="section-title"><i class="fa-solid fa-tags"></i> Access Fee Plan</h3>
+      
+    </section>
+
+    <section class="setup">
+      <h3 class="section-title"><i class="fa-solid fa-gears"></i> How to Setup Your Mobile VPS</h3>
+      <div class="card"><h3>1. Buy EA FORCE Access</h3><p>Get started for as low as $33.99.</p></div>
+      <div class="card"><h3>2. Purchase License Key</h3><p>Buy your license key from a verified mentor.</p></div>
+      <div class="card"><h3>3. Link EA & MT Account</h3><p>Connect your EA on the EA FORCE VPS and link your MT account for execution.</p></div>
+    </section>
+
+    <section class="faq" id="faq">
+      <h3 class="section-title"><i class="fa-solid fa-circle-question"></i> Have Some Questions?</h3>
+      <div class="card"><h3>How does a Forex VPS work?</h3><p>A Forex VPS runs your trading activities continuously, hosted in secure data centers with high-speed internet and backup power.</p></div>
+      <div class="card"><h3>Which location should I select?</h3><p>Select the server closest to your broker’s data center for lowest latency.</p></div>
+      <div class="card"><h3>What payment methods are available?</h3><p>All major cards and crypto supported. Contact support for local payment options.</p></div>
+    </section>
+
+    <footer>
+      <div>© 2025 EA FORCE. All Rights Reserved.</div>
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/eaforce_official_?igsh=dXJicmtycjk3amk3&utm_source=qr"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-telegram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
